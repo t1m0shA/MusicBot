@@ -5,8 +5,6 @@ from youtubesearchpython import *
 from threading import Thread
 from loop import Queue, Var
 
-#ODkwOTY4ODQ4ODEwMDAwNDE0.YU3hZg.5c0pgFEni0U7_U4GEI0oLZj6f9A
-
 class Music(commands.Cog, Player):
     
     def __init__(self, client):
@@ -21,24 +19,10 @@ class Music(commands.Cog, Player):
         self.permission = False
         self.URL_REG = re.compile(r"https?://(?:www\.)?.+")
         
-        
-       
-        
-        
-        
-        
-        
-        if not hasattr(client, 'wavelink'): self.client.wavelink = wavelink.Client(bot=self.client)
-
-        
-
+        if not hasattr(client, 'wavelink'): self.client.wavelink = wavelink.Client(bot=self.client  
         self.client.loop.create_task(self.start_nodes())
                 
-        
-    
-    
     async def start_nodes(self):
-        
         
         await self.client.wait_until_ready()
         await self.client.wavelink.initiate_node(
@@ -59,11 +43,7 @@ class Music(commands.Cog, Player):
             color=discord.Color.from_rgb(255, 0, 0)
             )
         await ctx.send(embed=embed)
-
-    @commands.command()
-    async def e(self, ctx):
-        print(self.queue)
-
+                                                                                   
     @commands.command(name = "join", aliases = ["j"])
     async def join(self, ctx, *, channel: discord.VoiceChannel = None): 
         
@@ -99,7 +79,6 @@ class Music(commands.Cog, Player):
         tracks = await self.client.wavelink.get_tracks(query)
         
         if not tracks: await Music.embed(self, ctx, text = "Could not find anything with that query")
-        
         
         if isinstance(tracks, wavelink.TrackPlaylist):
             
@@ -166,7 +145,7 @@ class Music(commands.Cog, Player):
         
         player = self.client.wavelink.get_player(ctx.guild.id)
         
-        if not player.is_playing: await Music.embed(self, ctx, text = "Command can't be executed when the player is off")
+        if not player.is_playing: await Music.embed(self, ctx, text = "Command can't be executed when the player is turned off")
         
         elif Var.current_track[-1] == 'Playlist':
             
@@ -250,6 +229,8 @@ class Music(commands.Cog, Player):
     @commands.command()
     async def seek(self, ctx, seconds: int):
         
+        """Description"""
+        
         player = self.client.wavelink.get_player(ctx.guild.id)
 
         if not player.is_playing and player.is_connected: 
@@ -296,7 +277,7 @@ class Music(commands.Cog, Player):
     @commands.command()
     async def commands(self, ctx):
         
-        """ Gives a list of available keywords """
+        """ Gives a list of available keywords by just taking them from file"""
         
         json_file = open('C:/Code/Python/Bots/music_bot/data/commands.json', 'r')
         Commands = json.loads(json_file.read())['UI']
