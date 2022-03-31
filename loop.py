@@ -14,7 +14,7 @@ class Queue():
     async def stream(self, ctx):
         
         id = ctx.guild.id
-        print(1, id)
+      
         player = self.client.wavelink.get_player(ctx.guild.id)
         
         q = self.queue[ctx.guild.id]
