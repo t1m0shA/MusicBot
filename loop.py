@@ -1,9 +1,9 @@
 import sys
 class Queue():
     
-    """ Queue for music bot 
+    """ Queue
         ~~~~~~~~~~~~~~~~~~~
-        The ultimate custom queue system for discord bot """
+        The ultimate custom queue system for wavelink discord bot """
     
     def __init__(self, client):
         
