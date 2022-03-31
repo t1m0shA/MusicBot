@@ -19,9 +19,9 @@ class Queue():
         
         q = self.queue[ctx.guild.id]
         for iter in range(len(q)):
-            print('2 in for loop', id)
+            
             iter = 0
-            #print('queue in loop',self.queue,"\n")
+            
             while player.is_playing and not self._skip: pass
             else:
                 self.permission = True
@@ -30,7 +30,7 @@ class Queue():
             try:  
                 
                 if self.permission:
-                    print('3 in try ex block', id, '\n')
+                   
                     self.current = self.queue[ctx.guild.id][iter]
                     Var.current_track = self.queue[ctx.guild.id][iter]
                     song = self.queue[ctx.guild.id][iter][iter]
@@ -41,7 +41,7 @@ class Queue():
                 pass
         
         #remove in case of issues
-        #serves to close thread when the player has went through all tracks in queue
+        #closes thread when the player has went through all tracks in queue
         sys.exit()
 
     async def runner(self, ctx):
