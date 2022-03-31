@@ -1,19 +1,3 @@
-# решить проблему с остановкой трека при работе на разных серверах   """RESOLVED"""
-
-# решить проблему очереди при работе на нескольких серверах
-
-# rebuild the queue system
-
-#.play https://www.youtube.com/watch?v=AGkRRdkPTtg&list=PLPf69IGxwfBFdVtuOZ64VlLfmsUb3HRzT
-#.play https://www.youtube.com/watch?v=GjMizl3qQGE
-#.play https://www.youtube.com/watch?v=K3Min4WnQPw
-#.play https://www.youtube.com/watch?v=wNPjimsMNHU
-#.play https://www.youtube.com/watch?v=dp-KXWfisHA&list=PLNaZxfoERz7s4sw5fIZX0Dsme5urqRSZr
-#.play https://www.youtube.com/watch?v=4s1gBIVOTtk&list=PL6ogdCG3tAWjnVY04Ic42nh6s4tVXAAM6
-#.play https://www.youtube.com/watch?v=inybPbfWPjw 
-
-
-
 import discord, json, keywords, discord.ext.commands.errors
 from discord.ext import commands
 
