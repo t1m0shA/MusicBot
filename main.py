@@ -61,4 +61,4 @@ async def on_command_error(ctx, error):
     if isinstance(error, discord.ext.commands.errors.MissingRequiredArgument) and ctx.author.voice is None:
         await embed(ctx, text=f'You should connect to a voice channel first. The command is missing required argument that depends on keyword you use')
 
-client.run("OTAzNjg1NzkxMTQ0ODk0NTg0.YXwk-g.bXgzrGkvIj8dF5x624DMhOhVGHs")
+client.run("TOKENHERE")
